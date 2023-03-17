@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BadBindingFailure"
+             x:Class="BadBindingFailure.MainPage"
+             BindingContext="{Binding Model, Source={RelativeSource Mode=Self}}"
+             x:DataType="{x:Type local:Company}">
+
+    <ListView ItemsSource="{Binding People}">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="{x:Type local:Person}">
+                <ViewCell>
+                    <Label Text="{Binding Name}" />
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
