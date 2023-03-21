@@ -6,14 +6,17 @@
              BindingContext="{Binding Model, Source={RelativeSource Mode=Self}}"
              x:DataType="{x:Type local:Company}">
 
-    <ListView ItemsSource="{Binding People}">
-        <ListView.ItemTemplate>
-            <DataTemplate x:DataType="{x:Type local:Person}">
-                <ViewCell>
-                    <Label Text="{Binding Name}" />
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <VerticalStackLayout Spacing="16" Margin="16">
+        <ListView ItemsSource="{Binding People}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type local:Person}">
+                    <ViewCell>
+                        <Label Text="{Binding Name}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="button1" Text="Test Button" HorizontalOptions="Start" />
+    </VerticalStackLayout>
 
 </ContentPage>
