@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ShellHotReload"
+             x:Class="ShellHotReload.MainPage">
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="PersonTemplate" x:DataType="{x:Type local:Person}">
+            <Grid ColumnDefinitions="32,*,Auto" Padding="0,4">
+                <Image Grid.Column="0" WidthRequest="32" HeightRequest="32" />
+                <Label Grid.Column="0" Text="😀" HorizontalOptions="Center" VerticalOptions="Center" />
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="BIND NAME HERE" FontSize="16" FontAttributes="Bold" />
+                    <Label FontSize="11" TextColor="Gray">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Foo" />
+                                <Span Text=" -> " />
+                                <Span Text="Bar" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </VerticalStackLayout>
+            </Grid>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <CollectionView ItemsSource="{Binding}" ItemTemplate="{StaticResource PersonTemplate}" />
+
+</ContentPage>
