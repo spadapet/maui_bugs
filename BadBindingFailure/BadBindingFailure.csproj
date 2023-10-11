@@ -51,9 +51,9 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-preview.7.23364.3" />
-		<PackageReference Include="Microsoft.Maui.Graphics" Version="7.0.100-dev" />
-		<PackageReference Include="Microsoft.Maui.Graphics.Win2D.WinUI.Desktop" Version="7.0.100-dev" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-rc.2.23479.6" />
+		<!--<PackageReference Include="Microsoft.Maui.Graphics" Version="7.0.100-dev" />
+		<PackageReference Include="Microsoft.Maui.Graphics.Win2D.WinUI.Desktop" Version="7.0.100-dev" />-->
 	</ItemGroup>
 
 	<!-- Build Properties must be defined within these property groups to ensure successful publishing
