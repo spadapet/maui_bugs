@@ -24,7 +24,7 @@
         <Grid Grid.Row="2">
             <Border Background="LightSalmon" WidthRequest="120" />
         </Grid>
-        <VerticalStackLayout>
+        <VerticalStackLayout Grid.RowSpan="3">
             <Button HorizontalOptions="Start" VerticalOptions="Start" Text="Toggle Grid.Row" Clicked="Button_Clicked" />
             <Label Text="{Binding GridRow, StringFormat='Second Box Grid.Row = {0}'}" />
             <Label Text="Resize window if layout isn't correct." />
