@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiApp10.MainPage"
+    x:Name="Root"
+    xmlns:local="clr-namespace:MauiApp10">
+    <ScrollView BindingContext="{Binding ViewModel, Source={x:Reference Root}}" x:DataType="{x:Type local:ViewModel}">
+        <VerticalStackLayout x:Name="Stack" Padding="30,0" Spacing="25">
+            <Image Source="dotnet_bot.png" HeightRequest="185" Aspect="AspectFit" />
+            <Button x:Name="CounterBtn" Text="Click to add/remove CollectionView" Clicked="OnCounterClicked" HorizontalOptions="Fill" />
+            <CollectionView x:Name="ItemList" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="x:String">
+                        <Border Stroke="Green" Margin="2" Padding="4">
+                            <Label Text="{Binding}" />
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
